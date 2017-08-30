@@ -1,0 +1,19 @@
+{
+  "extends": ["airbnb", "vue"],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "no-console": 0,
+    "vue/jsx-uses-vars": 2,
+    // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/CHANGELOG.md#600--2017-06-05
+    "jsx-a11y/href-no-hash": "off",
+    "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }]
+  },
+  "plugins": [
+    "vue",
+    "html"
+  ]
+}
