@@ -15,9 +15,35 @@
 </template>
 
 <script>
-    export default {
-        mounted() {
-            console.log('Component mounted.')
-        }
+export default {
+  name: 'app',
+  metaInfo: {
+    // if no subcomponents specify a metaInfo.title, this title will be used
+    title: 'Default Title',
+    // all titles will be injected into this template
+    titleTemplate: '%s | My Awesome Webapp'
+  },
+  created () {
+    this.test()
+  },
+  mounted () {
+    console.log('Component mounted. Index.')
+  },
+  data () {
+    return {
+      aaa: {}
     }
+  },
+  methods: {
+    test () {
+      this.$http({
+        url: '/api/test',
+        method: 'GET'
+      }).then((res) => {
+        this.aaa = res.data
+        console.log(res)
+      })
+    }
+  }
+}
 </script>
