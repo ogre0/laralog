@@ -21,6 +21,7 @@ Route::group(['middleware' => 'api'], function() {
   Route::get('test', function (Request $request) {
     return json_encode([['id' => 1], ['id' => 2]]);
   });
+  Route::resource('articles', 'ArticleController');
 });
 
 

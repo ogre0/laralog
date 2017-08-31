@@ -8,6 +8,7 @@
                     <div class="panel-body">
                         I'm an example component!
                     </div>
+                    <articles></articles>
                 </div>
             </div>
         </div>
@@ -15,7 +16,12 @@
 </template>
 
 <script>
+import Articles from './Articles.vue'
+
 export default {
+  components: {
+    Articles
+  },
   name: 'app',
   metaInfo: {
     // if no subcomponents specify a metaInfo.title, this title will be used
